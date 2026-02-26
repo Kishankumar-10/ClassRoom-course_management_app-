@@ -147,16 +147,84 @@ npm run dev
 ```
 classroom/
 ├── app/
-│   ├── (auth)/              # Authentication routes (login, signup)
-│   ├── data/                # Course data and TypeScript interfaces
-│   ├── instructor/          # Instructor dashboard and course management
-│   ├── student/             # Student dashboard and course browsing
-│   ├── globals.css          # Global styles and Tailwind imports
-│   ├── layout.tsx           # Root layout with navigation
-│   └── page.tsx             # Landing page
-├── components/              # Reusable React components
-├── public/                  # Static assets (images, icons)
-└── package.json             # Project dependencies and scripts
+│   ├── (auth)/
+│   │   ├── login/
+│   │   │   └── page.tsx                    # Login page
+│   │   ├── signup/
+│   │   │   └── page.tsx                    # Signup page
+│   │   └── layout.tsx                      # Auth layout
+│   ├── data/
+│   │   └── courses.ts                      # Course data and TypeScript interfaces
+│   ├── instructor/
+│   │   ├── courses/
+│   │   │   ├── [id]/                       # Dynamic course detail page
+│   │   │   └── page.tsx                    # Instructor courses list
+│   │   ├── create-course/
+│   │   │   └── page.tsx                    # Course creation form
+│   │   ├── dashboard/
+│   │   │   └── page.tsx                    # Instructor dashboard
+│   │   └── layout.tsx                      # Instructor layout
+│   ├── student/
+│   │   ├── courses/
+│   │   │   └── page.tsx                    # Browse available courses
+│   │   ├── dashboard/
+│   │   │   └── page.tsx                    # Student dashboard
+│   │   ├── my-courses/
+│   │   │   ├── [id]/                       # Dynamic enrolled course detail
+│   │   │   └── page.tsx                    # My enrolled courses
+│   │   └── layout.tsx                      # Student layout
+│   ├── favicon.ico                         # App favicon
+│   ├── globals.css                         # Global styles and Tailwind imports
+│   ├── layout.tsx                          # Root layout with navigation
+│   └── page.tsx                            # Landing page
+├── components/
+│   ├── Navbar.tsx                          # Main navigation component
+│   └── NavbarGate.tsx                      # Navigation gate component
+├── public/
+│   ├── course-thumbnails/                  # Course thumbnail images
+│   │   ├── AiMi.png
+│   │   ├── android-development.png
+│   │   ├── bussiness-entrepreneurship.png
+│   │   ├── cloud-computing.png
+│   │   ├── cyberse-curity.png
+│   │   ├── database.png
+│   │   ├── dsa.png
+│   │   ├── html.png
+│   │   ├── python.png
+│   │   └── ui-ux.png
+│   ├── classroom-image.jpg                 # Main classroom image
+│   ├── file.svg                            # File icon
+│   ├── globe.svg                           # Globe icon
+│   ├── next.svg                            # Next.js logo
+│   ├── vercel.svg                          # Vercel logo
+│   └── window.svg                          # Window icon
+├── screenshots/
+│   ├── auth/
+│   │   ├── instructor_signup_page.png
+│   │   ├── login_page.png
+│   │   └── student_signup_page.png
+│   ├── instructor_dashboard/
+│   │   ├── courses.png
+│   │   ├── create_course_details.png
+│   │   ├── instructor_course_details.png
+│   │   └── instructor_dashboard.png
+│   ├── landing_page/
+│   │   ├── contact.png
+│   │   ├── educators.png
+│   │   ├── features.png
+│   │   └── home.png
+│   └── student_dashboard/
+│       ├── available_courses.png
+│       ├── enrolled_courses.png
+│       ├── student_course_details.png
+│       └── student_dashboard.png
+├── .gitignore                              # Git ignore rules
+├── eslint.config.mjs                       # ESLint configuration
+├── next.config.ts                          # Next.js configuration
+├── package.json                            # Project dependencies and scripts
+├── postcss.config.mjs                      # PostCSS configuration
+├── README.md                               # Project documentation
+└── tsconfig.json                           # TypeScript configuration
 ```
 
 ## License
